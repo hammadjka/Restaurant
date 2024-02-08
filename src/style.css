@@ -4,9 +4,12 @@ html, body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url(back2.jpg) no-repeat center center / cover;
-    font-family: monospace;
-
+    background-image: url(back2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: cursive;
 }
 #nav{
     display: flex;
@@ -22,15 +25,13 @@ html, body{
 #holder{
     background: rgba(0,0,0,0.45); 
     margin: 10px 120px;
-    padding: 20px;
+    padding: 10px;
     flex: 1;
     color: white;
     display: flex;
     flex-direction: column;
 }
-#holder.menu{
-    background: rgba(0,0,0,0.45);
-}
+
 h1{
     text-align: center;
     margin: 0;
@@ -40,6 +41,7 @@ p{
     text-align: center;
     font-size: x-large;
     color: ghostwhite;
+    font-size: larger;
     margin: 15px;
 }
 
@@ -55,6 +57,7 @@ p{
     display: grid;
     align-items: start;
     justify-items: center;
+    font-family: cursive;
 }
 .size{
     font-size: medium;
