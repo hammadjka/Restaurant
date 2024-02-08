@@ -168,16 +168,25 @@ function loadContact(){
     heading.appendChild(document.createTextNode("Contact Us"));
     let p1 = document.createElement("p")
     p1.appendChild(document.createTextNode("For inquiries, reservations, or further assistance, please don't hesitate to reach out to us. Our team at Mr.Andy's is dedicated to providing exceptional service and addressing any questions you may have."));
-    let p2 = document.createElement("p")
-    p2.appendChild(document.createTextNode("Phone: 090-078-601"))
+    let contactInfo = document.createElement('div');
+    contactInfo.id = "contactInfo";
+    let p2 = document.createElement('p');
+    p2.appendChild(document.createTextNode("We look forward to hearing from you and serving you soon!"));
     let p3 = document.createElement("p")
-    p3.appendChild(document.createTextNode("Email: Mr.Andersons@coldmail.com"))
+    p3.appendChild(document.createTextNode("Phone: 090-078-601"))
     let p4 = document.createElement("p")
-    p4.appendChild(document.createTextNode("Address: 420, BlazeIt St"))
+    p4.appendChild(document.createTextNode("Email: Mr.Andersons@coldmail.com"))
+    let p5 = document.createElement("p")
+    p5.appendChild(document.createTextNode("Address: 420, BlazeIt St"))
+    
+    contactInfo.appendChild(p3);  
+    contactInfo.appendChild(p4);  
+    contactInfo.appendChild(p5);
+
     holder.appendChild(heading);
     holder.appendChild(p1);
-    holder.appendChild(p2);  
-    holder.appendChild(p3);  
-    holder.appendChild(p4);
+    holder.appendChild(p2)
+    holder.appendChild(contactInfo)
+
 }
 export { loadAboutUs, loadMenu, loadContact};
