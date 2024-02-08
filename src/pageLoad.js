@@ -3,10 +3,13 @@ import coffee from './coffee.svg';
 import bake from './food-croissant.svg';
 import cake from './cupcake.svg';
 
-function loadAboutUs (){
-    let holder = document.getElementById("holder");
+let holder = document.getElementById("holder");
+function resetHolder(){
     holder.innerHTML = "";
     holder.className = "";
+}
+function loadAboutUs (){
+    resetHolder();
 
     let heading = document.createElement("h1");
     heading.appendChild(document.createTextNode("Mr Andy's Home Cafe"));
@@ -143,9 +146,10 @@ function createHeaders(panel){
 
 }
 function loadMenu(){
-    let holder = document.getElementById("holder");
-    holder.innerHTML = "";
+    resetHolder();
     holder.classList.add("menu");
+    let heading = document.createElement("h1");
+    heading.appendChild(document.createTextNode("Menu"));
     
     let panel = document.createElement("div");
     panel.id = "menuItems"
@@ -154,12 +158,11 @@ function loadMenu(){
     createCoffees(panel);
     createBake(panel);
     createDessert(panel)
+    holder.appendChild(heading);
     holder.appendChild(panel);
 }
 function loadContact(){
-    let holder = document.getElementById("holder");
-    holder.innerHTML = "";
-    holder.className = "";
+    resetHolder();
 
     let heading = document.createElement("h1");
     heading.appendChild(document.createTextNode("Contact Us"));

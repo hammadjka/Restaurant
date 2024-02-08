@@ -42,16 +42,16 @@ p{
 
 #menuItems{
     display: grid;
-    height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content auto;
     justify-content: center;
     align-content: start;
 }
 .items{
-    padding-top: 0px;
+    padding-top: 13px;
     display: grid;
-    place-content: center;
+    align-items: start;
+    justify-items: center;
 }
 .size{
     font-size: medium;
